@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sagar Das Baniya — Web Developer</title>
+  <meta name="description" content="Portfolio of Sagar Das Baniya: web developer building projects with HTML, CSS, JavaScript, SQL and AI tools. Google AI Essentials and Prompting Essentials certified." />
+  <meta property="og:title" content="Sagar Das Baniya — Web Developer" />
+  <meta property="og:description" content="Web developer, SQL and AI prompting. See projects and certificates." />
+  <meta name="theme-color" content="#0c0d0e" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+<!-- ══ CURSOR ══ -->
+<div class="cursor cursor-ring" id="cursorRing"></div>
+<div class="cursor cursor-dot"  id="cursorDot"></div>
+
+<!-- ══ SCROLL PROGRESS ══ -->
+<div id="scroll-progress"></div>
+
+<!-- ══ LOADER ══ -->
+<div id="loader">
+  <div style="text-align:center">
+    <div class="loader-text"><span style="animation-delay:.0s">Sagar</span><span style="animation-delay:.3s;color:var(--accent)">&nbsp;Das&nbsp;Baniya</span></div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--muted);margin-top:.8rem;animation:loaderPop .6s .8s forwards;opacity:0">
+      Web Developer
+    </div>
+  </div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">SDB<span class="dot">.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">about</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#certificates">certificates</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+  <a href="https://drive.google.com/file/d/1tz6Y-x4T7I-hRRszWJSJdjYeszr7lFfe/view?usp=sharing" target="_blank" class="nav-cta">Resume ↗</a>
+  <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mob">
+  <a href="#about"        onclick="closeMob()">About</a>
+  <a href="#skills"       onclick="closeMob()">Skills</a>
+  <a href="#projects"     onclick="closeMob()">Projects</a>
+  <a href="#certificates" onclick="closeMob()">Certs</a>
+  <a href="#contact"      onclick="closeMob()">Contact</a>
+</div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="hero-grid-lines"></div>
+
+  <div class="hero-inner">
+    <!-- Left -->
+    <div class="hero-left reveal">
+      <div class="hero-status">
+        <span class="pulse"></span>
+        Available for Opportunities
+      </div>
+      <h1 class="name">Sagar<br><span class="glitch" data-text="Das Baniya">Das Baniya</span></h1>
+      <div class="hero-role-wrap">
+        <span style="color:var(--muted)">&gt;_</span>
+        <span class="typed-wrap"><span id="typed"></span><span id="typed-cursor">|</span></span>
+      </div>
+      <p class="hero-bio">I build fast, clean websites and small apps with HTML, CSS and JavaScript, and I use SQL and AI tools to ship faster. Four live projects, five certificates, and still learning every week.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-glow"><i class="fa-solid fa-rocket"></i> View My Work</a>
+        <a href="https://drive.google.com/file/d/1tz6Y-x4T7I-hRRszWJSJdjYeszr7lFfe/view?usp=sharing" target="_blank" class="btn-ghost"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/sagardasbaniya97" target="_blank" rel="noopener" class="soc-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sagar-das-baniya/" target="_blank" rel="noopener" class="soc-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:sagardasbaniya97@gmail.com" class="soc-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#certificates" class="soc-btn" title="Certificates"><i class="fa-solid fa-certificate"></i></a>
+      </div>
+    </div>
+
+    <!-- Right — Avatar -->
+    <div class="hero-right reveal d2">
+      <div class="avatar-wrap">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="avatar-glow"></div>
+        <div class="avatar-glow-inner"></div>
+        <div class="avatar-img monogram" aria-label="SDB monogram">SDB</div>
+
+        <div class="badge badge-1">
+          <span class="dot green"></span>
+          Open to Work
+        </div>
+        <div class="badge badge-2">
+          <span class="dot orange"></span>
+          HTML · CSS · JS
+        </div>
+        <div class="badge badge-3">
+          ⚡ Building cool stuff
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-eyebrow">who i am</div>
+    <h2 class="sec-title">About Me</h2>
+    <div class="about-grid reveal">
+      <div>
+        <div class="about-text">
+          <p>Hi, I'm <strong>Sagar Das Baniya</strong>. I design and build websites and small web apps, from a farm marketplace to a neon-styled game, and I like finishing things and putting them online.</p>
+          <p>My toolkit is <strong>HTML, CSS and JavaScript</strong> for the front end, <strong>SQL</strong> for data, and <strong>AI tools</strong> that speed up my work. I completed Google's <strong>AI Essentials</strong> and <strong>Prompting Essentials</strong> specializations in October 2026.</p>
+          <p>I'm pursuing a <strong>B.Tech in Computer Science &amp; Engineering</strong> at <strong>Lovely Professional University</strong> (2024 – 2028) and build projects alongside my coursework.</p>
+          <p>I'm looking for internships and junior roles where I can keep building and learning on a real team.</p>
+        </div>
+        <div class="stats-row">
+          <div class="stat-box"><div class="stat-val" data-count="4">0</div><div class="stat-lbl">Live Projects</div></div>
+          <div class="stat-box"><div class="stat-val" data-count="5">0</div><div class="stat-lbl">Certificates</div></div>
+          <div class="stat-box"><div class="stat-val" data-count="2">0</div><div class="stat-lbl">Google Specializations</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="info-card"><div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div><div><div class="info-lbl">education</div><div class="info-val">B.Tech CSE, Lovely Professional University (2024 – 2028)</div></div></div>
+        <a href="mailto:sagardasbaniya97@gmail.com" class="info-card"><div class="info-icon"><i class="fa-solid fa-envelope"></i></div><div><div class="info-lbl">email</div><div class="info-val">sagardasbaniya97@gmail.com</div></div></a>
+        <a href="https://www.linkedin.com/in/sagar-das-baniya/" target="_blank" rel="noopener" class="info-card"><div class="info-icon"><i class="fa-brands fa-linkedin-in"></i></div><div><div class="info-lbl">linkedin</div><div class="info-val">sagar-das-baniya</div></div></a>
+        <a href="https://github.com/sagardasbaniya97" target="_blank" rel="noopener" class="info-card"><div class="info-icon"><i class="fa-brands fa-github"></i></div><div><div class="info-lbl">github</div><div class="info-val">sagardasbaniya97</div></div></a>
+        <a href="https://drive.google.com/file/d/1tz6Y-x4T7I-hRRszWJSJdjYeszr7lFfe/view?usp=sharing" target="_blank" rel="noopener" class="info-card"><div class="info-icon"><i class="fa-solid fa-file-lines"></i></div><div><div class="info-lbl">resume</div><div class="info-val">View CV ↗</div></div></a>
+        <a href="#certificates" class="info-card"><div class="info-icon"><i class="fa-solid fa-certificate"></i></div><div><div class="info-lbl">latest</div><div class="info-val">Google AI Essentials, Oct 2026</div></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SKILLS ══════════════ -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-eyebrow">what i work with</div>
+    <h2 class="sec-title">Skills &amp; Technologies</h2>
+    <p class="sec-desc">The tools I use in my projects and coursework.</p>
+    <div class="skills-container reveal">
+<div class="skill-card"><div class="sk-head"><span class="sk-icon">🌐</span><span class="sk-name">Frontend and Backend</span></div><div class="tags"><span class="tag t-bl">HTML5</span><span class="tag t-bl">CSS3</span><span class="tag t-bl">JavaScript</span><span class="tag t-bl">Responsive Design</span></div></div><div class="skill-card"><div class="sk-head"><span class="sk-icon">🗄️</span><span class="sk-name">Database</span></div><div class="tags"><span class="tag t-ye">SQL, MongeDB</span></div></div><div class="skill-card"><div class="sk-head"><span class="sk-icon">🤖</span><span class="sk-name">AI &amp; Prompting</span></div><div class="tags"><span class="tag t-pu">Prompt Engineering</span><span class="tag t-pu">Generative AI Tools</span><span class="tag t-pu">Responsible AI</span></div></div><div class="skill-card"><div class="sk-head"><span class="sk-icon">⛓️</span><span class="sk-name">Web3</span></div><div class="tags"><span class="tag t-cy">Web3 Fundamentals</span></div></div><div class="skill-card"><div class="sk-head"><span class="sk-icon">🛠️</span><span class="sk-name">Tools &amp; Deploy</span></div><div class="tags"><span class="tag t-cy">Git</span><span class="tag t-cy">GitHub</span><span class="tag t-cy">Vercel</span><span class="tag t-cy">GitHub Pages</span></div></div><div class="skill-card"><div class="sk-head"><span class="sk-icon">🧠</span><span class="sk-name">Soft Skills</span></div><div class="tags"><span class="tag t-bl">Problem-Solving</span><span class="tag t-bl">Quick Learner</span><span class="tag t-bl">Adaptability</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROJECTS ══════════════ -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-eyebrow">what i've built</div>
+    <h2 class="sec-title">Projects</h2>
+    <p class="sec-desc">Four projects, all live. Open any card to try it.</p>
+    <div class="projects-grid reveal" style="grid-template-columns:repeat(2,1fr)">
+      <div class="project-card">
+        <div class="proj-banner proj-banner-1"><div class="proj-icon-bg">🌾</div><iframe class="proj-frame" src="https://khetbazaar-pgls.vercel.app/" title="Live preview" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe><a href="https://khetbazaar-pgls.vercel.app/" target="_blank" rel="noopener" class="proj-banner-link" aria-label="Open project"></a></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-num">Project 1</span>
+            <div class="proj-links"><a href="https://khetbazaar-pgls.vercel.app/" target="_blank" rel="noopener" class="proj-link proj-link-live" title="View live site" aria-label="View KhetBazaar live"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
+          <div class="proj-title">KhetBazaar</div>
+          <div class="proj-desc">Online marketplace for seeds, farm tools and organic inputs. Browse categories, filter by price, add to cart, place orders and track them, with an admin view.</div>
+          <div class="proj-tags"><span class="tag t-or">HTML</span><span class="tag t-or">CSS</span><span class="tag t-or">JavaScript</span></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-banner proj-banner-2"><div class="proj-icon-bg">🛡️</div><iframe class="proj-frame" src="https://cyber-shield-eight-navy.vercel.app/" title="Live preview" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe><a href="https://cyber-shield-eight-navy.vercel.app/" target="_blank" rel="noopener" class="proj-banner-link" aria-label="Open project"></a></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-num">Project 2</span>
+            <div class="proj-links"><a href="https://cyber-shield-eight-navy.vercel.app/" target="_blank" rel="noopener" class="proj-link proj-link-live" title="View live site" aria-label="View Cyber Shield live"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
+          <div class="proj-title">Cyber Shield</div>
+          <div class="proj-desc">A cyber-neon Rock Paper Scissors game with solo and two-player modes, best-of-3/5 matches, a predictive CPU difficulty, stats tracking, theme colors and synthesized sound.</div>
+          <div class="proj-tags"><span class="tag t-or">JavaScript</span><span class="tag t-pu">Web Audio</span><span class="tag t-cy">Game Logic</span></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-banner proj-banner-3"><div class="proj-icon-bg">🍳</div><iframe class="proj-frame" src="https://sagardasbaniya97.github.io/Chef_foodhub/" title="Live preview" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe><a href="https://sagardasbaniya97.github.io/Chef_foodhub/" target="_blank" rel="noopener" class="proj-banner-link" aria-label="Open project"></a></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-num">Project 3</span>
+            <div class="proj-links"><a href="https://sagardasbaniya97.github.io/Chef_foodhub/" target="_blank" rel="noopener" class="proj-link proj-link-live" title="View live site" aria-label="View Chef FoodHub live"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
+          <div class="proj-title">Chef FoodHub</div>
+          <div class="proj-desc">A food ordering web app where users can browse dishes and place food orders through a clean, easy-to-use interface. Hosted on GitHub Pages.</div>
+          <div class="proj-tags"><span class="tag t-or">HTML</span><span class="tag t-or">CSS</span><span class="tag t-or">JavaScript</span></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-banner proj-banner-2"><div class="proj-icon-bg">🤖</div><iframe class="proj-frame" src="https://jarvis-al-clone-project.vercel.app/" title="Live preview" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe><a href="https://jarvis-al-clone-project.vercel.app/" target="_blank" rel="noopener" class="proj-banner-link" aria-label="Open project"></a></div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="proj-num">Project 4</span>
+            <div class="proj-links"><a href="https://jarvis-al-clone-project.vercel.app/" target="_blank" rel="noopener" class="proj-link proj-link-live" title="View live site" aria-label="View Jarvis AI Clone live"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
+          <div class="proj-title">Jarvis AI Clone</div>
+          <div class="proj-desc">A Jarvis AI clone inspired by the Iron Man movies. It acts as a personal assistant that follows its master's commands. Built as a web app and deployed on Vercel.</div>
+          <div class="proj-tags"><span class="tag t-or">JavaScript</span><span class="tag t-pu">AI</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CERTIFICATES ══════════════ -->
+<section id="certificates">
+  <div class="section-inner">
+    <div class="section-eyebrow">achievements</div>
+    <h2 class="sec-title">Certificates</h2>
+    <p class="sec-desc">Google certificates link to their Coursera verification pages.</p>
+    <div class="certs-grid five reveal">
+<a href="https://coursera.org/verify/specialization/6K1L9XVQ400U" target="_blank" rel="noopener" class="cert-card"><div class="cert-icon-wrap"><i class="fa-solid fa-robot"></i></div><div><div class="cert-name">Google AI Essentials</div><div class="cert-issuer">Google · Coursera</div><div class="cert-date">Oct 1, 2026</div></div><i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i></a><a href="https://coursera.org/verify/specialization/IVK4QEQVRM9W" target="_blank" rel="noopener" class="cert-card"><div class="cert-icon-wrap"><i class="fa-solid fa-wand-magic-sparkles"></i></div><div><div class="cert-name">Google Prompting Essentials</div><div class="cert-issuer">Google · Coursera</div><div class="cert-date">Oct 1, 2026</div></div><i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i></a><a href="https://drive.google.com/file/d/1i4M6B3D-K0xPpBaoxg28orEIAEajH46s/view?usp=sharing" target="_blank" rel="noopener" class="cert-card"><div class="cert-icon-wrap"><i class="fa-solid fa-cubes"></i></div><div><div class="cert-name">Web3 Sabha</div><div class="cert-issuer">BlockseBlock</div><div class="cert-date">Aug 24, 2025</div></div><i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i></a><a href="https://drive.google.com/file/d/19WC90a33nj5iTMyaq4HjeZzrJNVtuzAM/view?usp=sharing" target="_blank" rel="noopener" class="cert-card"><div class="cert-icon-wrap"><i class="fa-solid fa-database"></i></div><div><div class="cert-name">SQL</div><div class="cert-issuer">HackerRank</div><div class="cert-date">Mar 19, 2025</div></div><i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i></a><a href="https://drive.google.com/file/d/1sI-h_q4QQqEFcIO_DF09a8j3xGL3kL77/view?usp=sharing" target="_blank" rel="noopener" class="cert-card"><div class="cert-icon-wrap"><i class="fa-solid fa-briefcase"></i></div><div><div class="cert-name">CSS443</div><div class="cert-issuer">LPU Placement Training &amp; Internship Program</div><div class="cert-date">Jun 12 – Jul 30, 2026</div></div><i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-eyebrow">let's connect</div>
+    <h2 class="sec-title">Get In Touch</h2>
+    <div class="contact-wrap reveal">
+      <div class="contact-left">
+        <p>I'm open to internships, junior roles and collaborations. Send a message or reach me on any link below.</p>
+        <div class="c-links">
+          <a href="mailto:sagardasbaniya97@gmail.com" class="c-link"><div class="ci"><i class="fa-solid fa-envelope"></i></div><div class="cd"><div class="cl">email</div><div class="cv">sagardasbaniya97@gmail.com</div></div></a>
+          <a href="https://www.linkedin.com/in/sagar-das-baniya/" target="_blank" rel="noopener" class="c-link"><div class="ci"><i class="fa-brands fa-linkedin-in"></i></div><div class="cd"><div class="cl">linkedin</div><div class="cv">sagar-das-baniya</div></div></a>
+          <a href="https://github.com/sagardasbaniya97" target="_blank" rel="noopener" class="c-link"><div class="ci"><i class="fa-brands fa-github"></i></div><div class="cd"><div class="cl">github</div><div class="cv">sagardasbaniya97</div></div></a>
+          <a href="https://drive.google.com/file/d/1tz6Y-x4T7I-hRRszWJSJdjYeszr7lFfe/view?usp=sharing" target="_blank" rel="noopener" class="c-link"><div class="ci"><i class="fa-solid fa-file-lines"></i></div><div class="cd"><div class="cl">resume</div><div class="cv">View my CV ↗</div></div></a>
+        </div>
+      </div>
+      <div class="c-form">
+        <form onsubmit="handleForm(event)">
+          <div class="fg"><input type="text" name="name" aria-label="Full name" placeholder="Full name" required /></div>
+          <div class="fg"><input type="email" name="email" aria-label="Your email" placeholder="you@example.com" required /></div>
+          <div class="fg"><input type="text" name="subject" aria-label="Subject" placeholder="What's this about?" /></div>
+          <div class="fg"><textarea name="message" aria-label="Message" placeholder="Write your message..." required></textarea></div>
+          <button type="submit" class="btn-send"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-logo">Sagar<span>DasBaniya</span></div>
+
+    <div class="ft-socials"><a href="https://github.com/sagardasbaniya97" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/in/sagar-das-baniya/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="mailto:sagardasbaniya97@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></div>
+  </div>
+</footer>
+
+<button id="scrollTop"><i class="fa-solid fa-chevron-up"></i></button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
